@@ -1,0 +1,96 @@
+2025-04-16T19:03:32.278+05:30  INFO 6752 --- [Heladiva-Project] [main] l.i.h.HeladivaProjectApplication         : Starting HeladivaProjectApplication using Java 17.0.10 with PID 6752 (D:\Heladiva-Project\target\classes started by ASUS in D:\Heladiva-Project)
+2025-04-16T19:03:32.283+05:30  INFO 6752 --- [Heladiva-Project] [main] l.i.h.HeladivaProjectApplication         : No active profile set, falling back to 1 default profile: "default"
+2025-04-16T19:03:32.913+05:30  INFO 6752 --- [Heladiva-Project] [main] o.s.b.f.s.DefaultListableBeanFactory     : Overriding bean definition for bean 'passwordEncoder' with a different definition: replacing [Root bean: class=null; scope=; abstract=false; lazyInit=null; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; fallback=false; factoryBeanName=securityConfig; factoryMethodName=passwordEncoder; initMethodNames=null; destroyMethodNames=[(inferred)]; defined in class path resource [lk/ijse/heladivaproject/config/SecurityConfig.class]] with [Root bean: class=null; scope=; abstract=false; lazyInit=null; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; fallback=false; factoryBeanName=heladivaProjectApplication; factoryMethodName=passwordEncoder; initMethodNames=null; destroyMethodNames=[(inferred)]; defined in lk.ijse.heladivaproject.HeladivaProjectApplication]
+2025-04-16T19:03:33.205+05:30  INFO 6752 --- [Heladiva-Project] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-04-16T19:03:33.296+05:30  INFO 6752 --- [Heladiva-Project] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 74 ms. Found 6 JPA repository interfaces.
+2025-04-16T19:03:33.845+05:30  INFO 6752 --- [Heladiva-Project] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-04-16T19:03:33.856+05:30  INFO 6752 --- [Heladiva-Project] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-04-16T19:03:33.856+05:30  INFO 6752 --- [Heladiva-Project] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.36]
+2025-04-16T19:03:33.922+05:30  INFO 6752 --- [Heladiva-Project] [main] o.a.c.c.C.[.[localhost].[/Heladiva]      : Initializing Spring embedded WebApplicationContext
+2025-04-16T19:03:33.923+05:30  INFO 6752 --- [Heladiva-Project] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1592 ms
+2025-04-16T19:03:34.091+05:30  INFO 6752 --- [Heladiva-Project] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-04-16T19:03:34.163+05:30  INFO 6752 --- [Heladiva-Project] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.7.Final
+2025-04-16T19:03:34.205+05:30  INFO 6752 --- [Heladiva-Project] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-04-16T19:03:34.540+05:30  INFO 6752 --- [Heladiva-Project] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-04-16T19:03:34.574+05:30  INFO 6752 --- [Heladiva-Project] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-04-16T19:03:35.012+05:30  INFO 6752 --- [Heladiva-Project] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@1214c98b
+2025-04-16T19:03:35.015+05:30  INFO 6752 --- [Heladiva-Project] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-04-16T19:03:35.105+05:30  WARN 6752 --- [Heladiva-Project] [main] org.hibernate.orm.deprecation            : HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-04-16T19:03:35.128+05:30  INFO 6752 --- [Heladiva-Project] [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 8.0.36
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-04-16T19:03:36.275+05:30  INFO 6752 --- [Heladiva-Project] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-04-16T19:03:36.453+05:30  INFO 6752 --- [Heladiva-Project] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-04-16T19:03:37.496+05:30  WARN 6752 --- [Heladiva-Project] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-04-16T19:03:37.531+05:30  INFO 6752 --- [Heladiva-Project] [main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name USER_DETAILS_SERVICE
+2025-04-16T19:03:38.129+05:30  INFO 6752 --- [Heladiva-Project] [main] o.s.v.b.OptionalValidatorFactoryBean     : Failed to set up a Bean Validation provider: jakarta.validation.NoProviderFoundException: Unable to create a Configuration, because no Jakarta Bean Validation provider could be found. Add a provider like Hibernate Validator (RI) to your classpath.
+2025-04-16T19:03:38.447+05:30  INFO 6752 --- [Heladiva-Project] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/Heladiva'
+2025-04-16T19:03:38.456+05:30  INFO 6752 --- [Heladiva-Project] [main] l.i.h.HeladivaProjectApplication         : Started HeladivaProjectApplication in 6.738 seconds (process running for 7.55)
+2025-04-16T19:03:50.373+05:30  INFO 6752 --- [Heladiva-Project] [http-nio-8080-exec-1] o.a.c.c.C.[.[localhost].[/Heladiva]      : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-04-16T19:03:50.373+05:30  INFO 6752 --- [Heladiva-Project] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-04-16T19:03:50.374+05:30  INFO 6752 --- [Heladiva-Project] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2025-04-16T19:04:57.681+05:30  INFO 6752 --- [Heladiva-Project] [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-04-16T19:04:57.927+05:30  INFO 6752 --- [Heladiva-Project] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-04-16T19:04:57.932+05:30  INFO 6752 --- [Heladiva-Project] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-04-16T19:04:57.934+05:30  INFO 6752 --- [Heladiva-Project] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-04-16T19:04:57.959+05:30  INFO 6752 --- [Heladiva-Project] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-04-16T19:05:12.147+05:30  INFO 3048 --- [Heladiva-Project] [main] l.i.h.HeladivaProjectApplication         : Starting HeladivaProjectApplication using Java 17.0.10 with PID 3048 (D:\Heladiva-Project\target\classes started by ASUS in D:\Heladiva-Project)
+2025-04-16T19:05:12.150+05:30  INFO 3048 --- [Heladiva-Project] [main] l.i.h.HeladivaProjectApplication         : No active profile set, falling back to 1 default profile: "default"
+2025-04-16T19:05:12.688+05:30  INFO 3048 --- [Heladiva-Project] [main] o.s.b.f.s.DefaultListableBeanFactory     : Overriding bean definition for bean 'passwordEncoder' with a different definition: replacing [Root bean: class=null; scope=; abstract=false; lazyInit=null; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; fallback=false; factoryBeanName=securityConfig; factoryMethodName=passwordEncoder; initMethodNames=null; destroyMethodNames=[(inferred)]; defined in class path resource [lk/ijse/heladivaproject/config/SecurityConfig.class]] with [Root bean: class=null; scope=; abstract=false; lazyInit=null; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; fallback=false; factoryBeanName=heladivaProjectApplication; factoryMethodName=passwordEncoder; initMethodNames=null; destroyMethodNames=[(inferred)]; defined in lk.ijse.heladivaproject.HeladivaProjectApplication]
+2025-04-16T19:05:12.904+05:30  INFO 3048 --- [Heladiva-Project] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-04-16T19:05:13.004+05:30  INFO 3048 --- [Heladiva-Project] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 90 ms. Found 6 JPA repository interfaces.
+2025-04-16T19:05:13.538+05:30  INFO 3048 --- [Heladiva-Project] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-04-16T19:05:13.551+05:30  INFO 3048 --- [Heladiva-Project] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-04-16T19:05:13.552+05:30  INFO 3048 --- [Heladiva-Project] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.36]
+2025-04-16T19:05:13.602+05:30  INFO 3048 --- [Heladiva-Project] [main] o.a.c.c.C.[.[localhost].[/Heladiva]      : Initializing Spring embedded WebApplicationContext
+2025-04-16T19:05:13.603+05:30  INFO 3048 --- [Heladiva-Project] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1405 ms
+2025-04-16T19:05:13.754+05:30  INFO 3048 --- [Heladiva-Project] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-04-16T19:05:13.802+05:30  INFO 3048 --- [Heladiva-Project] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.7.Final
+2025-04-16T19:05:13.836+05:30  INFO 3048 --- [Heladiva-Project] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-04-16T19:05:14.132+05:30  INFO 3048 --- [Heladiva-Project] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-04-16T19:05:14.162+05:30  INFO 3048 --- [Heladiva-Project] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-04-16T19:05:14.417+05:30  INFO 3048 --- [Heladiva-Project] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@2f8f40cc
+2025-04-16T19:05:14.419+05:30  INFO 3048 --- [Heladiva-Project] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-04-16T19:05:14.479+05:30  WARN 3048 --- [Heladiva-Project] [main] org.hibernate.orm.deprecation            : HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-04-16T19:05:14.495+05:30  INFO 3048 --- [Heladiva-Project] [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 8.0.36
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-04-16T19:05:15.399+05:30  INFO 3048 --- [Heladiva-Project] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-04-16T19:05:15.515+05:30  INFO 3048 --- [Heladiva-Project] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-04-16T19:05:16.147+05:30  WARN 3048 --- [Heladiva-Project] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-04-16T19:05:16.175+05:30  INFO 3048 --- [Heladiva-Project] [main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name USER_DETAILS_SERVICE
+2025-04-16T19:05:16.583+05:30  INFO 3048 --- [Heladiva-Project] [main] o.s.v.b.OptionalValidatorFactoryBean     : Failed to set up a Bean Validation provider: jakarta.validation.NoProviderFoundException: Unable to create a Configuration, because no Jakarta Bean Validation provider could be found. Add a provider like Hibernate Validator (RI) to your classpath.
+2025-04-16T19:05:16.948+05:30  INFO 3048 --- [Heladiva-Project] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/Heladiva'
+2025-04-16T19:05:16.957+05:30  INFO 3048 --- [Heladiva-Project] [main] l.i.h.HeladivaProjectApplication         : Started HeladivaProjectApplication in 5.19 seconds (process running for 5.81)
+2025-04-16T19:05:38.112+05:30  INFO 3048 --- [Heladiva-Project] [http-nio-8080-exec-1] o.a.c.c.C.[.[localhost].[/Heladiva]      : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-04-16T19:05:38.114+05:30  INFO 3048 --- [Heladiva-Project] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-04-16T19:05:38.117+05:30  INFO 3048 --- [Heladiva-Project] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2025-04-16T19:05:38.383+05:30  INFO 3048 --- [Heladiva-Project] [http-nio-8080-exec-4] l.i.h.controller.AuthController          : Received signIn request for email: dilmikavishka14@gmail.com
+2025-04-16T19:06:02.574+05:30  INFO 3048 --- [Heladiva-Project] [http-nio-8080-exec-9] l.i.h.controller.AuthController          : Received signIn request for email: dilmikavishka14@gmail.com
+2025-04-16T19:06:10.495+05:30  INFO 3048 --- [Heladiva-Project] [http-nio-8080-exec-6] l.i.h.controller.AuthController          : Received signIn request for email: dilmikavishka14@gmail.com
+2025-04-16T19:06:18.541+05:30  INFO 3048 --- [Heladiva-Project] [http-nio-8080-exec-7] l.i.h.controller.AuthController          : Received signIn request for email: dilmikavishka14@gmail.com
+2025-04-16T19:06:36.394+05:30  INFO 3048 --- [Heladiva-Project] [http-nio-8080-exec-10] l.i.h.controller.AuthController          : Received signIn request for email: dilmikavishka14@gmail.com
+2025-04-16T19:07:13.824+05:30  INFO 3048 --- [Heladiva-Project] [http-nio-8080-exec-3] l.i.h.controller.AuthController          : Received signIn request for email: dilmikavishka14@gmail.com
+2025-04-16T19:07:13.837+05:30  WARN 3048 --- [Heladiva-Project] [http-nio-8080-exec-3] o.s.s.c.bcrypt.BCryptPasswordEncoder     : Encoded password does not look like BCrypt
+2025-04-16T19:07:53.142+05:30  INFO 3048 --- [Heladiva-Project] [http-nio-8080-exec-6] l.i.h.controller.AuthController          : Received signup request for email: user@gmail.com
+2025-04-16T19:07:53.716+05:30  INFO 3048 --- [Heladiva-Project] [http-nio-8080-exec-6] l.i.h.controller.AuthController          : User registered successfully: user@gmail.com
+2025-04-16T19:07:56.117+05:30  INFO 3048 --- [Heladiva-Project] [http-nio-8080-exec-7] l.i.h.controller.ProductController       : Fetching all products
+2025-04-16T19:08:40.959+05:30  INFO 3048 --- [Heladiva-Project] [http-nio-8080-exec-10] l.i.h.controller.AuthController          : Received signIn request for email: dilmikavishka14@gmail.com
+2025-04-16T19:08:41.185+05:30  INFO 3048 --- [Heladiva-Project] [http-nio-8080-exec-10] l.i.h.controller.AuthController          : User signed in successfully: dilmikavishka14@gmail.com
+2025-04-16T19:08:44.276+05:30  INFO 3048 --- [Heladiva-Project] [http-nio-8080-exec-4] l.i.h.controller.ProductController       : Fetching all products
+2025-04-16T19:09:13.534+05:30  INFO 3048 --- [Heladiva-Project] [http-nio-8080-exec-9] l.i.h.controller.ArticleController       : Fetching all articles
+2025-04-16T19:09:18.194+05:30  INFO 3048 --- [Heladiva-Project] [http-nio-8080-exec-5] l.i.h.controller.ArticleController       : Fetching all articles
+2025-04-16T19:09:27.694+05:30  INFO 3048 --- [Heladiva-Project] [http-nio-8080-exec-8] l.i.h.controller.ArticleController       : Fetching all articles
+2025-04-16T19:14:09.104+05:30  INFO 3048 --- [Heladiva-Project] [http-nio-8080-exec-10] l.i.h.controller.ArticleController       : Fetching all articles
+2025-04-16T19:14:11.118+05:30  INFO 3048 --- [Heladiva-Project] [http-nio-8080-exec-4] l.i.h.controller.ArticleController       : Fetching article with ID: ART-001
+2025-04-16T19:14:14.299+05:30  INFO 3048 --- [Heladiva-Project] [http-nio-8080-exec-9] l.i.h.controller.ProductController       : Fetching all products

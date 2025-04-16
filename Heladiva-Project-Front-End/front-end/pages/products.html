@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Page</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+        body {
+            display: flex;
+            height: 100vh;
+            background-color: #f5f5f5;
+            padding: 20px;
+        }
+        .sidebar {
+            width: 250px;
+            padding: 20px;
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            position: fixed;
+            top: 20px;
+            left: 20px;
+            height: calc(100vh - 40px);
+            overflow-y: auto;
+        }
+        .content-container {
+            margin-left: 280px;
+            flex-grow: 1;
+        }
+        .product-container {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 10px;
+        }
+        .product-card {
+            width: 320px;
+            height: 450px;
+            background: #fff;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            transition: all 0.3s ease-in-out;
+            position: relative;
+            padding-bottom: 16px;
+        }
+
+        .product-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 18px rgba(0, 0, 0, 0.2);
+        }
+
+        .product-image-container {
+            position: relative;
+            overflow: hidden;
+        }
+
+        .product-made {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            background: black;
+            color: white;
+            font-size: 14px;
+            font-weight: bold;
+            padding: 6px 12px;
+            border-radius: 6px;
+        }
+
+        .product-image {
+            width: 100%;
+            height: 220px;
+            object-fit: cover;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .product-card:hover .product-image {
+            transform: scale(1.05);
+        }
+
+        .product-info {
+            padding: 16px;
+            text-align: start;
+        }
+
+        .product-type {
+            font-size: 14px;
+            color: #666;
+            margin-bottom: 6px;
+        }
+
+        .product-name {
+            font-size: 18px;
+            font-weight: 600;
+            color: #333;
+            margin-bottom: 8px;
+        }
+
+        .product-price {
+            font-size: 16px;
+            font-weight: bold;
+            color: #3DBF4E;
+        }
+
+        .quantity-cart-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 12px;
+        }
+
+        .quantity-container {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .quantity-btn {
+            background: #3DBF4E;
+            color: white;
+            border: none;
+            padding: 6px 12px;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            border-radius: 6px;
+            transition: background 0.2s ease-in-out;
+        }
+
+        .quantity-btn:hover {
+            background: #27ae60;
+        }
+
+        .quantity {
+            font-size: 16px;
+            font-weight: bold;
+            color: black;
+        }
+
+        .cart-button {
+            background: #3DBF4E;
+            color: white;
+            border: none;
+            padding: 10px 14px;
+            font-size: 14px;
+            font-weight: bold;
+            cursor: pointer;
+            border-radius: 6px;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            transition: background 0.2s ease-in-out;
+        }
+
+        .cart-button:hover {
+            background: #27ae60;
+        }
+
+        .cart-container {
+            z-index: 1000;
+            display: none; /* Initially hidden */
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            width: 300px;
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            max-height: calc(100vh - 40px);
+            overflow-y: auto;
+        }
+
+        .cart-icon-container {
+            z-index: 1000;
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            background: #3DBF4E;
+            color: white;
+            padding: 10px;
+            border-radius: 10%;
+            cursor: pointer;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+        .cart-title {
+            font-size: 18px;
+            font-weight: bold;
+            margin-bottom: 12px;
+            text-align: center;
+        }
+
+        .cart-items {
+            max-height: 200px;
+            overflow-y: auto;
+        }
+
+        .cart-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .cart-item-name {
+            font-size: 14px;
+        }
+
+        .cart-item-quantity {
+            font-size: 14px;
+            font-weight: bold;
+        }
+
+        .cart-summary {
+            margin-top: 10px;
+            text-align: center;
+            font-weight: bold;
+        }
+
+        .checkout-button {
+            background: #3DBF4E;
+            color: white;
+            border: none;
+            padding: 10px;
+            width: 100%;
+            font-size: 14px;
+            font-weight: bold;
+            cursor: pointer;
+            border-radius: 6px;
+            transition: background 0.2s ease-in-out;
+        }
+
+        .checkout-button:hover {
+            background: #27ae60;
+        }
+
+        @media (max-width: 768px) {
+            .product-card {
+                width: 100%;
+            }
+        }
+        @media (max-width: 1024px) {
+            .product-container {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 15px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .sidebar {
+                width: 100%;
+                position: static;
+                height: auto;
+                margin-bottom: 20px;
+            }
+
+            .content-container {
+                margin-left: 0;
+            }
+
+            .product-container {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 10px;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .product-container {
+                grid-template-columns: 1fr;
+            }
+
+            .product-card {
+                width: 100%;
+                height: auto;
+            }
+
+            .cart-icon-container {
+                top: 10px;
+                right: 10px;
+                padding: 8px;
+            }
+        }
+
+
+    </style>
+</head>
+<body>
+<div class="sidebar">
+    <h3 class="text-center">Filter By</h3>
+    <div class="mb-3">
+        <label class="form-label">Type</label>
+        <input type="text" class="form-control" placeholder="Enter type">
+    </div>
+    <div class="mb-3">
+        <label class="form-label">Price</label>
+        <input type="number" class="form-control" placeholder="Max price">
+    </div>
+    <div class="mb-3">
+        <label class="form-label">Name</label>
+        <input type="text" class="form-control" placeholder="Enter name">
+    </div>
+</div>
+
+<div class="content-container">
+    <!-- Cart Open Button -->
+    <div class="cart-icon-container">
+        <span class="material-icons" id="cart-toggle">shopping_cart</span>
+    </div>
+
+    <!-- Cart -->
+    <div class="cart-container" id="cart">
+        <h3 class="cart-title">
+            Shopping Cart
+            <span class="material-icons" id="cart-close">close</span>
+        </h3>
+        <div class="cart-items"></div>
+        <div class="cart-summary">
+            <p>Total: <span id="cart-total">LKR 0</span></p>
+            <button class="checkout-button" id="checkout-button">Checkout</button>
+        </div>
+    </div>
+
+    <div class="product-container">
+
+</div>
+</div>
+
+<script type="module" src="../JavaScript/ProductController.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

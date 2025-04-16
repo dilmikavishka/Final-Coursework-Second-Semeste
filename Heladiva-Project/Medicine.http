@@ -1,0 +1,16 @@
+POST localhost:8080/Heladiva/api/medicine/admin/save
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJyb2xlIjpbIlJPTEVfUk9MRV9BZG1pbiJdLCJzdWIiOiJyYXljb29yYXkzMkBnbWFpbC5jb20iLCJpYXQiOjE3NDI3OTQ3MTksImV4cCI6MTc0Mjg4MTExOX0.QgopGmsJZw5Wnw8X9qdSv3g52wM2J2zfFVYalcPlijg"
+
+{
+  "medicineId": "",
+  "name": "Neem Extract",
+  "disease": "Skin Infection, Acne",
+  "description": "Neem extract is used for treating various skin infections and acne due to its antibacterial properties.",
+  "allergies": "None",
+  "ingredients": ["Neem Leaves", "Water", "Turmeric"],
+  "preparation": "Boil neem leaves in water and mix with turmeric powder to form a paste.",
+  "usageInstructions": "Apply the paste to the affected area twice daily for best results.",
+  "sideEffects": ["Mild irritation", "Dryness"],
+  "authorId": "USR-001"
+}

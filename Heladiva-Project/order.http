@@ -1,0 +1,69 @@
+#POST http://localhost:8080/Heladiva/api/auth/signIn
+#Content-Type: application/json
+#
+#{
+#  "email": "raycooray32@gmail.com",
+#  "password": "12345678"
+#}
+
+
+#GET http://localhost:8080/Heladiva/api/Order/getById/ODR-001
+#Content-Type: application/json
+#Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJyb2xlIjpbIlJPTEVfUk9MRV9BZG1pbiJdLCJzdWIiOiJyYXljb29yYXkzMkBnbWFpbC5jb20iLCJpYXQiOjE3NDI1MzkyMjIsImV4cCI6MTc0MjYyNTYyMn0.28TDuLfvWkY7J6xSrEeSQCaJ0LGUcXBYz1qn73T4OE4"
+#
+
+
+
+
+#GET http://localhost:8080/Heladiva/api/Order/admin/getAll
+#Content-Type: application/json
+#Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJyb2xlIjpbIlJPTEVfUk9MRV9BZG1pbiJdLCJzdWIiOiJyYXljb29yYXkzMkBnbWFpbC5jb20iLCJpYXQiOjE3NDI1MzkyMjIsImV4cCI6MTc0MjYyNTYyMn0.28TDuLfvWkY7J6xSrEeSQCaJ0LGUcXBYz1qn73T4OE4"
+#
+POST http://localhost:8080/Heladiva/api/Order/save
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJyb2xlIjpbIlJPTEVfUk9MRV9BZG1pbiJdLCJzdWIiOiJyYXljb29yYXkzMkBnbWFpbC5jb20iLCJpYXQiOjE3NDI1NTQ5OTEsImV4cCI6MTc0MjY0MTM5MX0.t1wA2N_EJ7_tPhpKSocaujLKAO2INGop-5uFsfAv-J0"
+
+{
+  "userId": "USR-001",
+  "orderDate": "2025-03-21T10:30:00",
+  "totalPrice": 2500.00,
+  "status": "pending",
+  "firstName": "John",
+  "lastName": "Doe",
+  "addressLine1": "123 Main Street",
+  "apartmentSuite": "Apt 4B",
+  "road": "Central Road",
+  "postalCode": "10250",
+  "phone": "+94 77 367 1979",
+  "email": "john.doe@example.com",
+  "cardholderName": "John Doe",
+  "cardNumber": "4111111111111111",
+  "expiryDate": "12/27",
+  "cvc": "123",
+  "tripPrice": 500.00,
+  "tripDuration": "3 days",
+  "deliveryFee": 150.00,
+  "tax": 50.00,
+  "total": 2700.00,
+  "orderDetails": [
+    {
+      "productId": "PRT-001",
+      "quantity": 2,
+      "price": 1000.00
+    },
+    {
+      "productId": "PRT-002",
+      "quantity": 1,
+      "price": 2000.00
+    },
+    {
+      "productId": "PRT-003",
+      "quantity": 2,
+      "price": 2740.00
+    }
+  ]
+}
+
+
+
+
